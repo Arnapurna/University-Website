@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About</title>
+</head>
+
+<body>
+     <!-- Javascript toggle menu  -->
+     <script>
+        var menu = document.getElementById("navLinks");
+        function showmenu() {
+            navLinks.style.right = "0";
+        }
+        function hidemenu() {
+            navLinks.style.right = "-700px";
+        }
+    </script>
+    <!-- Header -->
+
+    <section class="sub-header">
+        <nav class="nav">
+            <a href="#" class="logo"><img src="/img/logo.png" alt=""> </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="/html/index.html">home</a></li>
+                    <li><a href="/html/about.html">about</a></li>
+                    <li><a href="/html/course.html">courses</a></li>
+                    <li><a href="/html/blog.html">blog</a></li>
+                    <li><a href="/html/contact.html">contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+
+    </section>
+
+    <!-- About us content -->
+
+    <section class="about-us">
+        <div class="splits">
+            <div class="about-col">
+                <h1>We are the world's largest university</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et laborum asperiores temporibus saepe
+                    adipisci placeat deleniti omnis quam quisquam. Tempore obcaecati laudantium, laborum architecto
+                    magni cum? Excepturi et suscipit consectetur.</p>
+                <a href="" class="btn">Explore now</a>
+            </div>
+            <div class="about-col">
+                <img src="/img/about.jpg" alt="">
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corrupti molestias laborum
+            perspiciatis<br> provident nulla in cupiditate esse magni sapiente?</p>
+        <div class="icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+</body>
+
+</html>
