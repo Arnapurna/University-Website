@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --nav-btn: #000;
+  --btn : #b70c00;
+  --color : rgb(237, 232, 250);
+  --footer-color : #f44336;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1{
+  font-size: 2em;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans Mono", sans-serif;
+  line-height: 1.6;
+}
+.sub-header {
+  min-height: 60vh;
+  width: 100%;
+  background: #222;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  /* margin-bottom: 2%; */
+}
+@supports (background-blend-mode: multiply) {
+  .sub-header {
+    background: linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(/img/background.jpg) center;
+    background-blend-mode: multiply;
+    background-size: cover;
+  }
+}
+.sub-header h1 {
+  margin-top: 5%;
+}
+
+/* /* Blog content  */
+
+.blog-content {
+  width: 80%;
+  margin: auto;
+  padding: 3em 0;
+}
+.blog-left {
+  flex-basis: 65%;
+}
+
+.blog-left img {
+  width: 100%;
+}
+.blog-left h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #222;
+  margin: 1em 0;
+}
+.blog-left p {
+  padding: 0;
+  color: #444;
+}
+.blog-right {
+  flex-basis: 40%;
+  padding: 0 2em;
+}
+.blog-right h3 {
+  background: #b70c00;
+  color: #fff;
+  padding: .5em 2em ;
+  margin: 0 0 2em 0;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.blog-right div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  padding: .5em;
+}
+
+/* Comment box  */
+
+.comment-box {
+  border: 1px solid #ccc;
+  padding: .5em 2em;
+  margin: 10% 0;
+}
+.form input,
+.form textarea {
+width: 100%;
+margin: 1em 0;
+padding: .5em 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+background: #f0f0f0;
+/* text-decoration: none; */
+}
+.form button {
+  margin-bottom: 1em;
+}
+
+
+.splits{
+  /* background: rgb(216, 216, 216); */
+  margin-top: 5%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  padding: 2% 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 10em;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.5em 2em;
+  position: relative; 
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-shadow: #222;
+  text-transform: uppercase;
+}
+.nav-links ul li::after {
+  content: "";
+  background: #8f0909;
+  width: 0%;
+  display: block;
+  height: 0.12rem;
+  margin: auto;
+  transition: .3s ;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fas {
+  display: none;
+}
+
+/* Button  */
+
+.btn {
+  color: var(--color);
+  background: var(--btn);
+  /* border-radius: .8em; */
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-shadow: #222;
+  text-transform: uppercase;
+  padding: .7em .5em;
+  border: .1em solid #222;
+  transition: 250ms;
+}
+.btn:hover {
+  color: var(--btn);
+  background: var(--color);
+  border: .1em solid var(--btn);
+ 
+}
+
+
+
+
+
+
+/* Footer  */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 5% 0;
+}
+.footer h4 {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.icons {
+  margin: 1em 0;
+}
+.icons .fab {
+  margin: 0 1em;
+  padding: 1em 0;
+  cursor: pointer;
+  color: var(--footer-color);
+}
+
+
+@media (max-width :53.4em) {
+
+  .logo{
+    width: 40%;
+    position: relative;
+  }
+  .logo img {
+    top: 5%;
+    left: 2%;
+    position: absolute;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+   
+    text-align: left;
+    background: rgba(19, 19, 46, 0.8);
+    width: 60%;
+    height: 100vh;
+    z-index: 5;
+    transition: 500ms ease;
+    /* display: none; */
+  }
+  nav .fas {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #fff;
+  }
+  .nav-links ul {
+    /* text-align: left; */
+    padding: 0.rem .8rem;
+  }
+
+  .splits{
+    flex-direction: column;
+  }
+  .btn {
+    font-size: .7rem;
+  }
+  .sub-header h1 {
+    font-size: 1.5em;
+    margin-top: 30%;
+  
+  }
+}
